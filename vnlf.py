@@ -55,7 +55,7 @@ def test_port(port):
 if __name__ == "__main__":
     print(f"\n-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~\n\nTESTING TARGET: {ITALIC}{test_host}{END}\nTESTING PORTS: {ITALIC}[{test_ports[0]}, {test_ports[1]}, {test_ports[2]}, {test_ports[3]}]{END}\n\n-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~\n")
 
-    # Use Pool() from multiprocessing to create a process for each tested port. 
+    # Use Pool() from multiprocessing to execute the function calls in parallel (one for each port in test_ports).
     # https://docs.python.org/3/library/multiprocessing.html
     with Pool(4) as p:
         results = p.map(test_port, test_ports)
