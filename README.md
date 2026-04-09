@@ -1,5 +1,5 @@
 # verify-firewall-policies
-This script verifies certain firewall policies by making connections to scanme.nmap.org on specified ports. For example, if you have policies denying TCP connections on port 22, this script will show if the connection was successful or not. 
+This script verifies specific firewall policies by attempting connections to scanme.nmap.org on specified ports. For example, if you have policies allowing or denying TCP connections on port 22, this script will indicate whether or not the connection attempt was successful. 
 
 
 Example output when ports are allowed:
